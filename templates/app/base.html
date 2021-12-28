@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>books API</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">書籍検索</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <!-- 動的処理が入る block -->
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    <footer class="py-2 bg-dark">
+        <p class="m-0 text-center text-white">Copyright &copy; Yuki Arimura</p>
+    </footer>
+    <!-- JavaScript 用の block -->
+    {% block extra_js %}
+    {% endblock %}
+</body>
+</html>

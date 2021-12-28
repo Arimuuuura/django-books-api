@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+<div class="text-center my-5">
+    <form method="post">
+        {% csrf_token %}
+        <div class="align-items-center">
+            {% render_field form.title class='form-control' placeholder='キーワードから探す' %}
+            <button class="btn btn-primary mt-2" type="submit">検索</button>
+        </div>
+    </form>
+    <div class="align-items-center mt-5">
+        <h4>「楽天ブックス書籍検索API」を用いた検索機能の実装</h4>
+        <h4>Study Python & Django</h4>
+    </div>
+    <div class="align-items-center mt-5">
+        <h5>Written by Yuki Arimura</h5>
+    </div>
+</div>
+{% endblock content %}
